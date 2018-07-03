@@ -6,12 +6,10 @@
 
   const PORT = process.env.PORT || 8000;
 
-
-  // Pretend like this app is going to use more than one core.
   if (cluster.isMaster) {
     console.error(`Node cluster master ${process.pid} is running`);
 
-    // Forkers
+    
     for (let i = 0; i < numCPUs; i++) {
       cluster.fork();
     }
@@ -21,8 +19,8 @@
     });
 
   } else {
-    //////////////////////////////////////////////////////////////////////
-
+    
+    
     const app = express();
     
     app.use(cors());

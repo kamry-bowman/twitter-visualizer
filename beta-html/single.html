@@ -10,6 +10,11 @@
     <meta name="author" content="Lambda School">
     <meta name="description" content="A tool that turns your tweets into art.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TweetCollageApp" />
+    <meta name="twitter:title" content="@username's collage" />
+    <meta name="twitter:description" content="Turn your tweets into art with TweetCollage" />
+    <meta name="twitter:image" content="https://work.tysonism.com/experiments/tweetcollage/img/placeholder-04.jpg" />
 
     <title>TweetCollage</title>
 
@@ -51,7 +56,6 @@
       /* For beta/demo purposes only */
       if (window.location.search) {
         const paramId = Number(window.location.search.substring(1));
-        console.log(window.location.search, paramId);
         if (paramId >= 0 && paramId < 7) {
           const collage = document.querySelector('.result-collage__img');
           const thumb = document.querySelector('.result-collage__thumb');
